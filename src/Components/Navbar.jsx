@@ -2,8 +2,8 @@ import logo from './../assets/logo.png';
 
 const Navbar = () => {
     return (
-        <nav className="flex flex-col lg:flex-row justify-between py-3 mx-6 mb-10">
-            <div className='flex flex-col lg:flex-row space-x-3'>
+        <nav className="flex flex-col lg:flex-row justify-between py-3 mx-6 mb-10 space-y-3">
+            <div className='flex flex-row space-x-3 space-y-2'>
                 <img src={logo} alt="" className='h-20 w-20'/>
                 <div className='text-left'>
                     <h3 className="text-xl font-bold text-gray-500">{new Date().toUTCString().slice(0, 16)}</h3>
@@ -11,7 +11,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div>
-                <input type="search" name="search" id="" placeholder="Search here" autoComplete="off" onChange={(e) => console.log(e.target.value)} />
+                <input type="search" name="search" id="" placeholder="Search here" autoComplete="off" onChange={(e) => console.log(e.target.value)} className='p-3 border border-gray-400 text-sm rounded-lg outline-none w-full lg:w-[25vw]' />
             </div>
         </nav>
     );
