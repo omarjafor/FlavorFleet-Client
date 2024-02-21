@@ -1,4 +1,5 @@
 import { IoMdClose } from "react-icons/io";
+import ItemCart from "./ItemCart";
 
 const Cart = () => {
     return (
@@ -12,6 +13,8 @@ const Cart = () => {
                     />
                 </div>
 
+                <ItemCart />
+                
                 <div className="absolute bottom-0 ">
                     <h3 className="font-semibold text-gray-800">Items : </h3>
                     <h3 className="font-semibold text-gray-800">
