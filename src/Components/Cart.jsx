@@ -8,7 +8,8 @@ import { useNavigate } from "react-router-dom";
 const Cart = () => {
     const [active, setActive] = useState(false);
     const cartItems = useSelector(state => state.cart.cart);
-
+    const totalQty = cartItems.reduce((total, item) => total + item.qty, 0)
+    const totalPrice = cartItems.reduce((total, item) => total + item.qty * item.price, 0);
     const navigate = useNavigate();
     return (
         <>
@@ -42,13 +43,13 @@ const Cart = () => {
                 )}
 
                 <div className="absolute bottom-0 ">
-                    <h3 className="font-semibold text-gray-800">Items : </h3>
+                    <h3 className="font-semibold text-gray-800">Items : {totalQty}</h3>
                     <h3 className="font-semibold text-gray-800">
-                        Total Amount : 
+                        Total Amount : {totalPrice}
                     </h3>
                     <hr className="w-[90vw] lg:w-[18vw] my-2" />
                     <button
-                        
+                        onClick={() => navigate("/success")}
                         className="bg-green-500 font-bold px-3 text-white py-2 rounded-lg w-[90vw] lg:w-[18vw] mb-5"
                     >
                         Checkout
