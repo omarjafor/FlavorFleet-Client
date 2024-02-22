@@ -1,7 +1,7 @@
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { dcrmntQty, incmntQty, rmvFrmCart } from "../redux/slice/CartSlice";
+import { dcrmntQty, incmntQty, rmvFrmCart } from "../redux/slices/CartSlice";
 import toast from "react-hot-toast";
 
 const ItemCart = ({ id, name, qty, price, img }) => {
