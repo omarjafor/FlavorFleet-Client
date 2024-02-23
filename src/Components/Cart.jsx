@@ -48,9 +48,9 @@ const Cart = () => {
                         Total Amount : {totalPrice}
                     </h3>
                     <hr className="w-[90vw] lg:w-[18vw] my-2" />
-                    <button
+                    <button disabled={cartItems?.length == 0 && "true"}
                         onClick={() => navigate("/success")}
-                        className="bg-green-500 font-bold px-3 text-white py-2 rounded-lg w-[90vw] lg:w-[18vw] mb-5"
+                        className={`font-bold px-3 text-white py-2 rounded-lg w-[90vw] lg:w-[18vw] mb-5 ${cartItems.length > 0 ? 'bg-green-500': 'bg-gray-400'}`}
                     >
                         Checkout
                     </button>
